@@ -34,7 +34,7 @@ return {
 
   {
     "sphamba/smear-cursor.nvim",
-    enabled = true,
+    enabled = false,
   },
   {
     -- Plugin: claude-code.nvim

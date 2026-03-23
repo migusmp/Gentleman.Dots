@@ -6,20 +6,22 @@ return {
     {
         "stevearc/conform.nvim",
         event = "BufWritePre",
-        config = function()
-            local conform = safe.require("conform")
-            if not conform then return end
-
-            conform.setup({
+        keys = {
+            {
+                "<leader>f",
+                function()
+                    require("conform").format({ lsp_fallback = true, timeout_ms = 1000 })
+                end,
+                desc = "Format file",
+            },
+        },
+        opts = function()
+            return {
                 formatters_by_ft = {
                     cpp = { "clang_format" },
                     php = { "php_cs_fixer" },
                 },
-                format_on_save = {
-                    timeout_ms = 500,
-                    lsp_fallback = true,
-                },
-                formatters = {
+formatters = {
                     php_cs_fixer = {
                         command = "php-cs-fixer",
                         args = { "fix", "$FILENAME" },
@@ -31,11 +33,7 @@ return {
                         }),
                     },
                 },
-            })
-
-            vim.keymap.set("n", "<leader>f", function()
-                conform.format({ lsp_fallback = true, timeout_ms = 1000 })
-            end, { desc = "Format file", silent = true })
+            }
         end,
     },
 

@@ -45,6 +45,7 @@ return {
     {
       "Gentleman-Programming/gentleman-kanagawa-blur",
       name = "gentleman-kanagawa-blur",
+      lazy = false,
       priority = 1000,
     },
     {
@@ -56,7 +57,7 @@ return {
     {
       "rebelot/kanagawa.nvim",
       priority = 1000,
-      lazy = true,
+      lazy = false,
       config = function()
         require("kanagawa").setup({
           compile = false, -- enable compiling the colorscheme

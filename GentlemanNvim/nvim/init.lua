@@ -1,3 +1,6 @@
+-- Ensure treesitter parser directory is in runtimepath before any plugin loading
+vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/site")
+
 -- Configure Node.js before loading plugins
 require("config.nodejs").setup({ silent = true })
 

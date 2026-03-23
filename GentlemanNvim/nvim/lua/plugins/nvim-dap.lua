@@ -177,7 +177,7 @@ return {
 
       -- Load launch configurations from .vscode/launch.json if it exists
       if vim.fn.filereadable(".vscode/launch.json") then
-        vscode.load_launchjs()
+        -- vscode.load_launchjs()
       end
 
       -- Function to load environment variables

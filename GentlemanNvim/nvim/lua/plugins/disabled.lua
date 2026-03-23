@@ -21,7 +21,7 @@ return {
   },
   {
     "NickvanDyke/opencode.nvim",
-    enabled = false,
+    enabled = true,
   },
   {
     "olimorris/codecompanion.nvim",
@@ -34,7 +34,7 @@ return {
 
   {
     "sphamba/smear-cursor.nvim",
-    enabled = false,
+    enabled = true,
   },
   {
     -- Plugin: claude-code.nvim

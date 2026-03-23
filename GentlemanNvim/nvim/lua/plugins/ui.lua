@@ -30,7 +30,7 @@ local function codecompanion_adapter_name()
     return nil
   end
 
-  return " " .. chat.adapter.formatted_name
+  return " " .. chat.adapter.formatted_name
 end
 
 local function codecompanion_current_model_name()
@@ -240,42 +240,70 @@ return {
       dashboard = {
         sections = {
           { section = "header" },
-          { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-          { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+          { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+          { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
           { section = "startup" },
         },
         preset = {
           header = [[
-                    ░░░░░░      ░░░░░░                        
-                  ░░░░░░░░░░  ░░░░░░░░░░                      
-                ░░░░░░░░░░░░░░░░░░░░░░░░░░                    
-              ░░░░░░░░░░▒▒▒▒░░▒▒▒▒░░░░░░░░░░                  
-  ░░░░      ░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░        ░░░░    
-▒▒░░      ░░░░░░▒▒▒▒▒▒▒▒▒▒██▒▒██▒▒▒▒▒▒▒▒▒▒░░░░░░        ▒▒░░  
-▒▒░░    ░░░░░░░░▒▒▒▒▒▒▒▒▒▒████▒▒████▒▒▒▒▒▒▒▒▒▒░░░░░░░░  ▒▒░░▒ 
-▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒ 
-██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██████▓▓██▒▒██████▒▒▓▓██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█ 
-████▒▒▒▒▒▒████▒▒▒▒██████████  ██████████▒▒▒▒████▒▒▒▒▒▒▒▒██    
-  ████████████████████████      ████████████████████████      
-    ██████████████████              ██████████████████        
-        ██████████                      ██████████            
+                    ░░░░░░      ░░░░░░
+                  ░░░░░░░░░░  ░░░░░░░░░░
+                ░░░░░░░░░░░░░░░░░░░░░░░░░░
+              ░░░░░░░░░░▒▒▒▒░░▒▒▒▒░░░░░░░░░░
+  ░░░░      ░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░        ░░░░
+▒▒░░      ░░░░░░▒▒▒▒▒▒▒▒▒▒██▒▒██▒▒▒▒▒▒▒▒▒▒░░░░░░        ▒▒░░
+▒▒░░    ░░░░░░░░▒▒▒▒▒▒▒▒▒▒████▒▒████▒▒▒▒▒▒▒▒▒▒░░░░░░░░  ▒▒░░▒
+▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒
+██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██████▓▓██▒▒██████▒▒▓▓██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+████▒▒▒▒▒▒████▒▒▒▒██████████  ██████████▒▒▒▒████▒▒▒▒▒▒▒▒██
+  ████████████████████████      ████████████████████████
+    ██████████████████              ██████████████████
+        ██████████                      ██████████
 ]],
           -- stylua: ignore
           ---@type snacks.dashboard.Item[]
           keys = {
-            { icon = " ", key = "ff", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-            { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-            { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-            { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
-            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-            { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
+            { icon = " ", key = "ff", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+            { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+            { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+            { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
             { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
-            { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+            { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
         },
       },
     },
+  },
+
+  -- Plugin: tiny-inline-diagnostic.nvim
+  -- URL: https://github.com/rachartier/tiny-inline-diagnostic.nvim
+  -- Description: A Neovim plugin for displaying inline diagnostics with a modern look.
+  -- NOTE: virtual_text is disabled here and in diagnostics.lua — this plugin takes over that role.
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "LspAttach",
+    priority = 1000,
+    config = function()
+      require("tiny-inline-diagnostic").setup({
+        preset = "modern",
+        options = {
+          show_source = true,
+          multilines = {
+            enabled = true,
+            always_show = false,
+          },
+          show_all_diags_on_cursorline = true,
+          enable_on_insert = false,
+          overflow = {
+            mode = "wrap",
+          },
+        },
+      })
+      vim.diagnostic.config({ virtual_text = false })
+    end,
   },
 }

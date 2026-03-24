@@ -37,15 +37,35 @@ return {
       name = "catppuccin",
       priority = 1000,
       opts = {
-        flavour = "mocha", -- latte, frappe, macchiato, mocha
+        flavour = "mocha",             -- latte, frappe, macchiato, mocha
         transparent_background = true, -- disables setting the background color.
-        term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+        term_colors = true,            -- sets terminal colors (e.g. `g:terminal_color_0`)
       },
     },
     {
       "Gentleman-Programming/gentleman-kanagawa-blur",
       name = "gentleman-kanagawa-blur",
       lazy = false,
+      priority = 1000,
+    },
+    {
+      "olimorris/onedarkpro.nvim",
+      priority = 1000, -- Ensure it loads first
+    },
+    {
+      "https://github.com/morhetz/gruvbox.git",
+      priority = 1000,
+    },
+    {
+      "https://github.com/Mofiqul/vscode.nvim.git",
+      priority = 1000,
+    },
+    {
+      "https://github.com/everviolet/nvim.git",
+      priority = 1000,
+    },
+    {
+      "https://github.com/niyabits/calvera-dark.nvim.git",
       priority = 1000,
     },
     {
@@ -60,17 +80,17 @@ return {
       lazy = false,
       config = function()
         require("kanagawa").setup({
-          compile = false, -- enable compiling the colorscheme
+          compile = false,  -- enable compiling the colorscheme
           undercurl = true, -- enable undercurls
           commentStyle = { italic = true },
           functionStyle = {},
           keywordStyle = { italic = true },
           statementStyle = { bold = true },
           typeStyle = {},
-          transparent = true, -- do not set background color
-          dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+          transparent = true,    -- do not set background color
+          dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
           terminalColors = true, -- define vim.g.terminal_color_{0,17}
-          colors = { -- add/modify theme and palette colors
+          colors = {             -- add/modify theme and palette colors
             palette = {},
             theme = {
               wave = {},
@@ -78,9 +98,9 @@ return {
               dragon = {},
               all = {
                 ui = {
-                  bg_gutter = "none", -- set bg color for normal background
+                  bg_gutter = "none",  -- set bg color for normal background
                   bg_sidebar = "none", -- set bg color for sidebar like nvim-tree
-                  bg_float = "none", -- set bg color for floating windows
+                  bg_float = "none",   -- set bg color for floating windows
                 },
               },
             },
@@ -96,8 +116,8 @@ return {
               LspInfoBorder = { bg = "none" },
             }
           end,
-          theme = "wave", -- Load "wave" theme
-          background = { -- map the value of 'background' option to a theme
+          theme = "wave",  -- Load "wave" theme
+          background = {   -- map the value of 'background' option to a theme
             dark = "wave", -- try "dragon" !
             light = "lotus",
           },

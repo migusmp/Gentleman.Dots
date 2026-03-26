@@ -2,6 +2,13 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_hl(0, "@lsp.type.unresolvedReference", {})
+  end,
+})
+
 -- nvim-treesitter doesn't auto-enable highlight for Go in Neovim 0.11.
 -- Force-start the native treesitter highlighter on every Go buffer.
 vim.api.nvim_create_autocmd("FileType", {

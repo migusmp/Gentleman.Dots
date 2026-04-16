@@ -38,7 +38,7 @@ Una configuración completa de entorno de desarrollo que incluye:
 - **Shells**: Fish, Zsh, Nushell
 - **Multiplexores de terminal**: Tmux, Zellij
 - **Emuladores de terminal**: Alacritty, WezTerm, Kitty, Ghostty
-- **Configs de Agentes IA**: Configuraciones base para Claude Code y OpenCode (se instalan mediante [gentle-ai](https://github.com/Gentleman-Programming/gentle-ai))
+- **Herramientas CLI de IA**: Instaladores de Claude Code y OpenCode CLI (configs gestionadas por [gentle-ai](https://github.com/Gentleman-Programming/gentle-ai))
 
 ---
 
@@ -138,7 +138,7 @@ Configura tus agentes de IA con todo lo que necesitan:
 |--|---------------------------|-----------|
 | **Propósito** | Entorno de desarrollo (editores, shells, terminales) | Capa de desarrollo con IA (agentes, memoria, skills) |
 | **Instala** | Neovim, Fish/Zsh, Tmux/Zellij, Ghostty | Configura Claude Code, OpenCode, Gemini CLI, Cursor, VS Code Copilot |
-| **Configs base** | `GentlemanClaude/`, `GentlemanOpenCode/` | Lee de este repo + sus propios assets |
+| **Configs IA** | Solo CLI tools (Claude Code, OpenCode) | Config completa: persona, skills, temas, MCP |
 
 Instalá Gentleman.Dots primero para tu entorno de desarrollo, después `gentle-ai` para la capa de IA.
 
@@ -215,3 +215,11 @@ Contiene configuraciones de vanguardia que luego pasan a `main` cuando se estabi
 Licencia MIT — libre de usar, modificar y compartir.
 
 **¡Feliz coding!** 🎩
+
+---
+
+## Contribuidores
+
+¡Gracias a todos los que contribuyeron a Gentleman.Dots!
+
+[![Contributors](https://contrib.rocks/image?repo=Gentleman-Programming/Gentleman.Dots)](https://github.com/Gentleman-Programming/Gentleman.Dots/graphs/contributors)
